@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="AVA Centro Educa Mais">
+  <rect width="256" height="256" fill="#173F5F"/>
+  <path d="M40 62c34-22 68-22 88 0v132c-22-16-52-16-88 0V62Z" fill="#F6F8F5"/>
+  <path d="M128 62c20-22 54-22 88 0v132c-36-16-66-16-88 0V62Z" fill="#CFE8E1"/>
+  <path d="M128 66v128" stroke="#173F5F" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="128" cy="62" r="22" fill="#4FB3A4" stroke="#173F5F" stroke-width="10"/>
+</svg>

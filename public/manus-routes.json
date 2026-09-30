@@ -1,0 +1,26 @@
+{
+  "routes": [
+    { "path": "/", "title": "Login" },
+    { "path": "/login", "title": "Login" },
+    { "path": "/dashboard", "title": "Dashboard" },
+    { "path": "/minha-area", "title": "Minha área" },
+    { "path": "/alunos", "title": "Alunos" },
+    { "path": "/alunos/:id", "title": "Detalhes do aluno" },
+    { "path": "/professores", "title": "Professores" },
+    { "path": "/professores/:id", "title": "Detalhes do professor" },
+    { "path": "/disciplinas", "title": "Disciplinas" },
+    { "path": "/disciplinas/:id", "title": "Detalhes da disciplina" },
+    { "path": "/turmas", "title": "Turmas" },
+    { "path": "/turmas/:id", "title": "Detalhes da turma" },
+    { "path": "/atividades", "title": "Atividades" },
+    { "path": "/atividades/:id", "title": "Detalhes da atividade" },
+    { "path": "/notas", "title": "Notas" },
+    { "path": "/frequencia", "title": "Frequência" },
+    { "path": "/comunicados", "title": "Comunicados" },
+    { "path": "/calendario", "title": "Calendário" },
+    { "path": "/ia", "title": "Assistente IA" },
+    { "path": "/relatorios", "title": "Relatórios" },
+    { "path": "/configuracoes", "title": "Configurações" },
+    { "path": "/perfil", "title": "Gerenciamento de perfil" }
+  ]
+}
