@@ -50,10 +50,14 @@ export const schoolClasses: SchoolClass[] = [
 ]
 
 export const activities: Activity[] = [
-  { id: 'a1', title: 'Projeto: Energia e Sustentabilidade', subject: 'Ciências', teacher: 'Prof. Thiago Nunes', className: '200 ADM', dueDate: '04 out 2026', type: 'Projeto', status: 'Pendente', value: 10, submissions: 18, totalStudents: 29 },
-  { id: 'a2', title: 'Lista de funções do 2º grau', subject: 'Matemática', teacher: 'Prof. André Martins', className: '100', dueDate: '02 out 2026', type: 'Exercício', status: 'Entregue', value: 8, submissions: 29, totalStudents: 32 },
-  { id: 'a3', title: 'Crônica do cotidiano', subject: 'Língua Portuguesa', teacher: 'Profa. Juliana Azevedo', className: '300 MKT', dueDate: '28 set 2026', type: 'Trabalho', status: 'Atrasada', value: 10, submissions: 22, totalStudents: 31 },
-  { id: 'a4', title: 'Revisão: Revolução Industrial', subject: 'História', teacher: 'Profa. Larissa Lima', className: '200 ADM', dueDate: '07 out 2026', type: 'Pesquisa', status: 'Pendente', value: 7, submissions: 11, totalStudents: 29 },
+  { id: 'lesson-mat', title: 'Aula: Funções do 2º grau', subject: 'Matemática', teacher: 'Prof. André Martins', className: '100', dueDate: '01 out 2026', type: 'Aula', status: 'Pendente', value: 0, submissions: 0, totalStudents: 32 },
+  { id: 'a2', title: 'Lista de funções do 2º grau', subject: 'Matemática', teacher: 'Prof. André Martins', className: '100', dueDate: '02 out 2026', type: 'Exercício', status: 'Entregue', value: 8, submissions: 29, totalStudents: 32, lessonId: 'lesson-mat', lessonTitle: 'Aula: Funções do 2º grau' },
+  { id: 'lesson-science', title: 'Aula: Energia e sustentabilidade', subject: 'Ciências', teacher: 'Prof. Thiago Nunes', className: '200 ADM', dueDate: '01 out 2026', type: 'Aula', status: 'Pendente', value: 0, submissions: 0, totalStudents: 29 },
+  { id: 'a1', title: 'Projeto: Energia e Sustentabilidade', subject: 'Ciências', teacher: 'Prof. Thiago Nunes', className: '200 ADM', dueDate: '04 out 2026', type: 'Projeto', status: 'Pendente', value: 10, submissions: 18, totalStudents: 29, lessonId: 'lesson-science', lessonTitle: 'Aula: Energia e sustentabilidade' },
+  { id: 'lesson-history', title: 'Aula: Revolução Industrial', subject: 'História', teacher: 'Profa. Larissa Lima', className: '200 ADM', dueDate: '03 out 2026', type: 'Aula', status: 'Pendente', value: 0, submissions: 0, totalStudents: 29 },
+  { id: 'a4', title: 'Revisão: Revolução Industrial', subject: 'História', teacher: 'Profa. Larissa Lima', className: '200 ADM', dueDate: '07 out 2026', type: 'Pesquisa', status: 'Pendente', value: 7, submissions: 11, totalStudents: 29, lessonId: 'lesson-history', lessonTitle: 'Aula: Revolução Industrial' },
+  { id: 'lesson-portuguese', title: 'Aula: Crônica e cotidiano', subject: 'Língua Portuguesa', teacher: 'Profa. Juliana Azevedo', className: '300 MKT', dueDate: '26 set 2026', type: 'Aula', status: 'Pendente', value: 0, submissions: 0, totalStudents: 31 },
+  { id: 'a3', title: 'Crônica do cotidiano', subject: 'Língua Portuguesa', teacher: 'Profa. Juliana Azevedo', className: '300 MKT', dueDate: '28 set 2026', type: 'Trabalho', status: 'Atrasada', value: 10, submissions: 22, totalStudents: 31, lessonId: 'lesson-portuguese', lessonTitle: 'Aula: Crônica e cotidiano' },
 ]
 
 export const announcements: Announcement[] = [

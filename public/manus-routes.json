@@ -2,8 +2,13 @@
   "routes": [
     { "path": "/", "title": "Login" },
     { "path": "/login", "title": "Login" },
+    { "path": "/esqueci-senha", "title": "Esqueci minha senha" },
+    { "path": "/admin-login", "title": "Login administrativo" },
     { "path": "/dashboard", "title": "Dashboard" },
+    { "path": "/admin", "title": "Administração" },
     { "path": "/minha-area", "title": "Minha área" },
+    { "path": "/cadastro/aluno", "title": "Cadastro individual de aluno" },
+    { "path": "/cadastro/professor", "title": "Cadastro individual de professor" },
     { "path": "/alunos", "title": "Alunos" },
     { "path": "/alunos/:id", "title": "Detalhes do aluno" },
     { "path": "/professores", "title": "Professores" },

@@ -9,6 +9,10 @@ import { ActivitiesPage, ActivityDetailPage, AnnouncementsPage, AssistantPage, A
 import LoginPage from '@/pages/LoginPage'
 import ProfilePage from '@/pages/ProfilePage'
 import { RoleAreaPage } from '@/pages/UserAreaPages'
+import RegistrationPage from '@/pages/RegistrationPages'
+import ForgotPasswordPage from '@/pages/ForgotPasswordPage'
+import AdminPage from '@/pages/AdminPage'
+import AdminLoginPage from '@/pages/AdminLoginPage'
 import { hasPermission } from '@/lib/permissions'
 import '@/styles.css'
 
@@ -17,6 +21,8 @@ function ProtectedRoute() {
   if (!user) return <Navigate to="/login" replace />
   return <AppShell />
 }
+
+function AdminRoute() { const { adminAuthenticated } = useApp(); if (!adminAuthenticated) return <Navigate to="/admin-login" replace />; return <AppShell /> }
 
 function PermissionRoute({ permission, children }: { permission: string; children: React.ReactNode }) {
   const { user } = useApp()
@@ -27,9 +33,14 @@ function PermissionRoute({ permission, children }: { permission: string; childre
 function AppRouter() {
   return <Routes>
     <Route path="/login" element={<LoginPage />} />
+    <Route path="/esqueci-senha" element={<ForgotPasswordPage />} />
+    <Route path="/admin-login" element={<AdminLoginPage />} />
+    <Route element={<AdminRoute />}><Route path="/admin" element={<AdminPage />} /></Route>
     <Route element={<ProtectedRoute />}>
       <Route path="/dashboard" element={<DashboardPage />} />
       <Route path="/minha-area" element={<RoleAreaPage />} />
+      <Route path="/cadastro/aluno" element={<PermissionRoute permission="alunos"><RegistrationPage kind="aluno" /></PermissionRoute>} />
+      <Route path="/cadastro/professor" element={<PermissionRoute permission="professores"><RegistrationPage kind="professor" /></PermissionRoute>} />
       <Route path="/alunos" element={<PermissionRoute permission="alunos"><EntityDirectoryPage kind="alunos" /></PermissionRoute>} />
       <Route path="/alunos/:id" element={<PermissionRoute permission="alunos"><EntityDetailPage kind="alunos" /></PermissionRoute>} />
       <Route path="/professores" element={<PermissionRoute permission="professores"><EntityDirectoryPage kind="professores" /></PermissionRoute>} />

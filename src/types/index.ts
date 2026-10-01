@@ -72,6 +72,8 @@ export interface Activity {
   value: number
   submissions: number
   totalStudents: number
+  lessonId?: string
+  lessonTitle?: string
 }
 
 export interface Announcement {
